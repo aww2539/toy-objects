@@ -43,8 +43,11 @@ const tennisBall = {
 toys.push(baseball);
 toys.push(tennisBall);
 
+
+const toyToFind = 4
 for (const toy of toys) {
-    console.log(toy.name);
-    console.log(toy.price, 'dollars');
-    console.log('');
+    if (toy.id === toyToFind) {
+        toy.price = toy.price * 1.05
+        console.log(`The ${toy.name} costs ${toy.price} dollars.`)
+    }
 }
