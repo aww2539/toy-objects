@@ -45,6 +45,7 @@ toys.push(tennisBall);
 
 
 const toyToFind = 4
+
 for (const toy of toys) {
     if (toy.id === toyToFind) {
         toy.price = toy.price * 1.05
