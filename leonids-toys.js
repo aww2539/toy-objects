@@ -44,7 +44,7 @@ toys.push(baseball);
 toys.push(tennisBall);
 
 for (const toy of toys) {
-    console.log(toy.name);
-    console.log(toy.price, 'dollars');
+    toy.price = toy.price * 1.05
+    console.log(`The ${toy.name} is ${toy.height} centimeters tall and costs ${toy.price} dollars`);
     console.log('');
 }
