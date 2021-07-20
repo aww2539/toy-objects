@@ -43,8 +43,79 @@ const tennisBall = {
 toys.push(baseball);
 toys.push(tennisBall);
 
-for (const toy of toys) {
-    console.log(toy.name);
-    console.log(toy.price, 'dollars');
-    console.log('');
+// for (const toy of toys) {
+//     toy.price = (toy.price * 1.05).toFixed(2)
+//     console.log(`The ${toy.name} is ${toy.height} centimeters tall and costs $${toy.price}.`);
+//     console.log('');
+// }
+
+// push new toy into array without id
+
+const frisbee = {
+    type: "Disc",
+    name: "Frisbee",
+    price: 4,
 }
+
+const createToy = (toysObject) => {
+    // adding `id` property to note object //
+    const lastIndex = toys.length - 1
+    const currentLastToysObject = toys[lastIndex]
+    const maxId = currentLastToysObject.id
+    const idForNewToysObject = maxId + 1
+
+    toysObject.id = idForNewToysObject
+    toys.push(toysObject)
+}
+
+createToy(frisbee);
+
+// ------------------------------
+
+const removeProduct = (objectId) => {
+    for (const toy of toys) {
+        if (toy.id === objectId) {
+        return toys.splice(objectId, 1)
+        }
+    }
+}
+removeProduct(1)
+console.log(toys)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
